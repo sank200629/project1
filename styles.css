@@ -10,6 +10,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* Navbar Styles */
@@ -97,6 +98,96 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Blog Posts Grid */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.blog-post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-post-content {
+    padding: 1rem;
+}
+
+.blog-post-content h3 {
+    margin: 0.5rem 0;
+}
+
+.blog-post-content p {
+    color: #666;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #007BFF;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #575757;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .nav-links {
@@ -110,13 +201,7 @@ body {
         display: none;
     }
 
-    .nav-links a {
-        padding: 1rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links.show {
+    .nav-links.nav-links_visible {
         display: flex;
     }
 
@@ -124,15 +209,23 @@ body {
         display: flex;
     }
 
+    .hamburger::before {
+        transform: translateY(-6px);
+    }
+
+    .hamburger::after {
+        transform: translateY(6px);
+    }
+
     .nav-toggle.active .hamburger {
         transform: rotate(45deg);
     }
 
     .nav-toggle.active .hamburger::before {
-        transform: rotate(90deg) translateX(0);
+        transform: rotate(90deg) translateX(6px);
     }
 
     .nav-toggle.active .hamburger::after {
-        transform: rotate(90deg) translateX(0);
+        transform: rotate(90deg) translateX(-6px);
     }
 }
