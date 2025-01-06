@@ -1,73 +1,123 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Responsive Blog</title>
+    <title>luxury mens parlour</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">My Blog</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
+    <header>
+        <div class="logo-container">
+            <img src="https://stock.adobe.com/search/images?k=mens+salon" alt="Luxury mens parlour" class="logo">
+            <h1 class="parlour">Luxury mens parlour </h1>
         </div>
+      </header>
+    
+      <nav>
+        <ul class="nav-bar">
+            <li><a href="#about">About</a></li>
+            <li><a href="#Artwork">Artwork</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#grooming station">Grooming station</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="section">
-        <div class="container">
-            <h1>Welcome to My Blog</h1>
-            <p>Sharing insights and stories on web development and design.</p>
+    <section id="about" class="about-section">
+        <div class="about-heading-container">
+            <h2 class="about-heading">About Us</h2>
+        </div>
+        <div class="about-content">
+            <p>
+                The design of a men's parlor often combines sophistication with comfort, blending elements like leather furniture, vintage bar setups, and modern lighting to create an atmosphere of quiet luxury. It’s a place where men can indulge in personal rituals, such as enjoying a fine cigar or savoring a whiskey, while also maintaining an aura of style and functionality. Whether designed as a grooming station, a lounge for socializing, or a sanctuary for quiet reflection, the men’s parlor serves as a versatile space that reflects the personality and tastes of its owner, offering a perfect balance between utility and indulgence.
+            <p>
+                A men's parlor is a refined and intimate space designed for relaxation, leisure, and self-care. Traditionally, it has served as a retreat where men could escape the demands of daily life, whether it be for grooming, entertaining guests, or simply unwinding.
+            </p>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm a web developer passionate about creating interactive and responsive web applications.</p>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="section">
-        <div class="container">
-            <h2>Latest Posts</h2>
-            <div class="blog-posts">
-                <!-- Blog posts will be injected here by JavaScript -->
+    <section id="Artwork" class="Artwork-section">
+        <h2>Artwork</h2>
+        <div class="Artwork-container">
+            <div class="Artwork">
+                <h3>Framed Photos</h3>
+                <p>Price: ₹500/per hour</p>
+                <button onclick="bookArtwork('Artwork', 500)">Book Now</button>
+            </div>
+            <div class="Artwork">
+                <h3>Plants</h3>
+                <p>Price: ₹700/per hour</p>
+                <button onclick="bookPlants('Plants', 2000)">Book Now</button>
+            </div>
+            <div class="Artwork">
+                <h3>Vintage Decor</h3>
+                <p>Price: ₹900/per hour</p>
+                <button onclick="bookVintageDecor('Vintage Decor', 900)">Book Now</button>
+            </div>
+            <div class="Artwork">
+                <h3> Cigar</h3>
+                <p>Price: ₹800/per hour</p>
+                <button onclick="bookRoom(' Cigar', 800)">Book Now</button>
+            </div>
+            <div class="Artwork">
+                <h3>Sports Memorabilia</h3>
+                <p>Price: ₹1000/per hour</p>
+                <button onclick="bookSportsMemorabilia('Sports Memorabilia', 1000)">Book Now</button>
+            </div>
+            <div class="Artwork">
+                <h3>Personal Pieces</h3>
+                <p>Price: ₹1000/per hour</p>
+                <button onclick="bookPersonalPieces('Personal Pieces', 1000)">Book Now</button>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
+    <section id="services" class="services-section">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item"> Bookshelf</div>
+            <div class="service-item">Cigar Humidor</div>
+            <div class="service-item">Unique Clock</div>
+            <div class="service-item">Photography</div>
+            <div class="service-item">Hobby Corner</div>
+            <div class="service-item">Sentimental Decor</div>
+            <div class="service-item">Personalized Barware</div>
+            <div class="service-item">Music Corner</div>
+            <div class="service-item">Personalized Lighting Fixtures</div>
         </div>
     </section>
 
+    <section id="grooming station" class="grooming station-section">
+        <h2 >Grooming station</h2>
+        <div class="gromming station-grid">
+            <img src="https://vendor.mschirpy.com/blogs/1696850528.jpg" alt="Grooming Image 1">
+            <img src="https://m.media-amazon.com/images/I/71O6VcPGpjL.jpg" alt="Gallery Image 2">
+            <img src="https://img.freepik.com/premium-photo/professional-barber-working-with-client-hairdressing-salon-uses-hair-dryer-men-s-haircut-barbershop_613910-5058.jpg" alt="Grooming Image 3">
+            <img src="https://res.cloudinary.com/conferences-and-exhibitions-pvt-ltd/image/upload/v1655285681/Salon-Management/2022/June/Men/6819d0eb-fdb3-4ae1-8f0b-61d8200e9bd6_r6jacd.jpg" alt="Grooming Image 4">
+            <img src="https://media.istockphoto.com/id/1325440885/photo/retro-styled-beauty-salon.jpg?s=612x612&w=0&k=20&c=uEdh3ypS-Zeq9X5YJzIfBaiaoFYstRFNowZBTbQWT8I=" alt="Grooming Image 5">
+            <img src="https://thumbs.dreamstime.com/z/barbershop-armchair-modern-hairdresser-hair-salon-barber-shop-men-brown-136954055.jpg" alt="Grooming Image 6">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="example='Sank'" >
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="example@email.com">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Hello"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Luxury Mens Parlour. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
